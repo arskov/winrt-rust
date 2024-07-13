@@ -1,0 +1,19 @@
+namespace win_example {
+
+struct DeviceData {
+    Int32 DeviceId;
+    String Description;
+};
+
+interface IDeviceStore {
+    DeviceData Load(Int32 deviceId);
+    void Save(DeviceData data);
+};
+
+[default_interface] runtimeclass DeviceService {
+    DeviceService(IDeviceStore store);
+    DeviceData CreateDevice(Int32 deviceId, String description);
+    DeviceData CreateRandomDevice();
+};
+
+}

@@ -1,0 +1,19 @@
+[package]
+name = "win_example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies.windows]
+version = "0.56.0"
+features = [
+    "implement",
+    "Win32_Foundation",
+    "Win32_System_WinRT",
+]
+
+[dependencies.windows-core]
+version = "0.56.0"
+
+[build-dependencies.windows-bindgen]
+version = "0.56.0"
+
